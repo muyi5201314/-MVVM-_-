@@ -1,0 +1,88 @@
+.song-catalog {
+  width: 90%;
+  margin: 0 5% 0 5%;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.song-catalog-header {
+  display: flex;
+}
+
+/* 表头 */
+.song-catalog-header-sort {
+  width: 15%;
+}
+
+.song-catalog-header-song {
+  width: 40%;
+}
+
+.song-catalog-header-singer {
+  width: 25%;
+}
+
+.song-catalog-header-size {
+  width: 20%;
+}
+
+/* 表头公用css */
+.song-catalog-header-value {
+  font-size: 0.9rem;
+  /* color: rgba(255, 255, 255, 0.8); */
+}
+
+/* 数据 */
+.song-catalog-main-eve {
+  display: flex;
+  align-items: center;
+}
+
+.song-catalog-main-eve:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* 三层选择，控制音乐 */
+.song-catalog-main-eve:hover .song-catalog-main-song .song-catalog-main-controller {
+  opacity: 1;
+  visibility: visible;
+}
+
+.song-catalog-main-value {
+  margin: 8px 0 8px 0;
+}
+
+.song-catalog-main-sort {
+  width: 15%;
+}
+
+.song-catalog-main-song {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.song-catalog-main-sone-value {
+}
+
+.song-catalog-main-singer {
+  width: 25%;
+}
+
+.song-catalog-main-size {
+  width: 20%;
+}
+
+/* 控制 */
+.song-catalog-main-controller{
+  margin: 0 16px 0 0;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.song-catalog-main-controller-icon{
+  margin: 0 6px 0 0;
+  cursor: pointer;
+}

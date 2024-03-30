@@ -1,0 +1,368 @@
+{
+	"FileReferences" : 
+	{
+		"DisplayInfo" : "Nahida_1080.cdi3.json",
+		"Expressions" : 
+		[
+			{
+				"File" : "expressions/Angry.exp3.json",
+				"Name" : "angry"
+			},
+			{
+				"File" : "expressions/black.exp3.json",
+				"Name" : "black"
+			},
+			{
+				"File" : "expressions/Halfeyes.exp3.json",
+				"Name" : "half eyes"
+			},
+			{
+				"File" : "expressions/HandChange.exp3.json",
+				"Name" : "thinking"
+			},
+			{
+				"File" : "expressions/Happy1.exp3.json",
+				"Name" : "happy"
+			},
+			{
+				"File" : "expressions/kusa.exp3.json",
+				"Name" : "kusa"
+			},
+			{
+				"File" : "expressions/mouthchange.exp3.json",
+				"Name" : "mouthchange"
+			},
+			{
+				"File" : "expressions/Sad1.exp3.json",
+				"Name" : "sad1"
+			},
+			{
+				"File" : "expressions/Sad2.exp3.json",
+				"Name" : "sad2"
+			},
+			{
+				"File" : "expressions/Shy.exp3.json",
+				"Name" : "shy"
+			},
+			{
+				"File" : "expressions/shy_normal.exp3.json",
+				"Name" : "shy normal"
+			},
+			{
+				"File" : "expressions/StarEye.exp3.json",
+				"Name" : "speaking"
+			},
+			{
+				"File" : "expressions/Wink.exp3.json",
+				"Name" : "wink"
+			}
+		],
+		"Moc" : "Nahida_1080.moc3",
+		"Motions" : 
+		{
+			"Afternoon" : 
+			[
+				{
+					"File" : "motions/Hiyori_m01.motion3.json",
+					"Sound" : "sounds/nahida.afternoon_0.wav",
+					"Text" : "午休时间到，我想喝树莓薄荷饮。用两个和太阳有关的故事和你换，好不好？"
+				}
+			],
+			"Chat" : 
+			[
+				{
+					"File" : "motions/Hiyori_m01.motion3.json",
+					"Sound" : "",
+					"Text" : ""
+				},
+				{
+					"File" : "motions/Hiyori_m02.motion3.json",
+					"Sound" : "",
+					"Text" : ""
+				},
+				{
+					"File" : "motions/Hiyori_m03.motion3.json",
+					"Sound" : "",
+					"Text" : ""
+				},
+				{
+					"File" : "motions/Hiyori_m04.motion3.json",
+					"Sound" : "",
+					"Text" : ""
+				},
+				{
+					"File" : "motions/Hiyori_m05.motion3.json",
+					"Sound" : "",
+					"Text" : ""
+				},
+				{
+					"File" : "motions/Hiyori_m06.motion3.json",
+					"Sound" : "",
+					"Text" : ""
+				},
+				{
+					"File" : "motions/Hiyori_m07.motion3.json",
+					"Sound" : "",
+					"Text" : ""
+				},
+				{
+					"File" : "motions/Hiyori_m08.motion3.json",
+					"Sound" : "",
+					"Text" : ""
+				},
+				{
+					"File" : "motions/Hiyori_m09.motion3.json",
+					"Sound" : "",
+					"Text" : ""
+				},
+				{
+					"File" : "motions/Hiyori_m10.motion3.json",
+					"Sound" : "",
+					"Text" : ""
+				}
+			],
+			"Evening" : 
+			[
+				{
+					"File" : "motions/Hiyori_m01.motion3.json",
+					"Sound" : "sounds/nahida.evening_0.wav",
+					"Text" : "太阳落山啦，我们也该把舞台让给夜行的大家族了。"
+				},
+				{
+					"File" : "motions/Hiyori_m03.motion3.json",
+					"Sound" : "sounds/nahida.evening_1.wav",
+					"Text" : "听见了吗？天空正对万物轻语：「睡觉时间到了哦。」"
+				}
+			],
+			"Idle" : 
+			[
+				{
+					"File" : "motions/Hiyori_m02.motion3.json",
+					"Sound" : "sounds/nahida.idle_0.wav",
+					"Text" : "又可以增长见识了。"
+				},
+				{
+					"File" : "motions/Hiyori_m02.motion3.json",
+					"Sound" : "sounds/nahida.idle_01.wav",
+					"Text" : "感谢你愿意让我成为你的同伴，还教会了我那么多新的知识。我以智慧之神的名义为你赐福，从今往后不再会有困惑阻碍你的旅途。"
+				},
+				{
+					"File" : "motions/Hiyori_m02.motion3.json",
+					"Sound" : "sounds/nahida.idle_02.wav",
+					"Text" : "宫殿里可不会起风呢…哦，抱歉，对你来说是理所当然的知识吧。"
+				},
+				{
+					"File" : "motions/Hiyori_m02.motion3.json",
+					"Sound" : "sounds/nahida.idle_03.wav",
+					"Text" : "果然要亲眼去看，才能感受到世界的美。"
+				},
+				{
+					"File" : "motions/Hiyori_m02.motion3.json",
+					"Sound" : "sounds/nahida.idle_04.wav",
+					"Text" : "就这么看着你，算是爱好吗？因为你的一举一动都让我很好奇啊。作为世界的旅行者，你从哪里来，将到哪里去，会遇到什么人，战胜什么困难，都是我想寻求的答案。你不用太在意我，就让我一直观察你吧。"
+				},
+				{
+					"File" : "motions/Hiyori_m02.motion3.json",
+					"Sound" : "sounds/nahida.idle_05.wav",
+					"Text" : "没去过的地方还有很多呢。"
+				},
+				{
+					"File" : "motions/Hiyori_m02.motion3.json",
+					"Sound" : "sounds/nahida.idle_06.wav",
+					"Text" : "你旅途中的见闻，比我学习到的知识要精彩太多，而且我还能随时提问，把所有的细节都了解到一清二楚…真是太满足了。好了好了，别浪费时间，我们快继续吧。"
+				},
+				{
+					"File" : "motions/Hiyori_m02.motion3.json",
+					"Sound" : "sounds/nahida.idle_07.wav",
+					"Text" : "你知道吗？雷鸣是生命的前奏，很快这片大地就会充满生机。"
+				},
+				{
+					"File" : "motions/Hiyori_m02.motion3.json",
+					"Sound" : "sounds/nahida.idle_08.wav",
+					"Text" : "全都看见咯。"
+				},
+				{
+					"File" : "motions/Hiyori_m02.motion3.json",
+					"Sound" : "sounds/nahida.idle_09.wav",
+					"Text" : "神明只送给人类填饱肚子的知识，人类却借此制作了工具，书写了文字，壮大了城邦，现在又放眼星辰与深渊…他们每时每刻都在创造全新的「知识」，也令我再也无法移开双眼。"
+				},
+				{
+					"File" : "motions/Hiyori_m02.motion3.json",
+					"Sound" : "sounds/nahida.idle_10.wav",
+					"Text" : "听说玩游戏能够快速缩短人与人之间的距离。神也是如此吧。不如，在和大家相聚之后，我就主动提议一起玩「跳房子」…好像也不合适。弄得像是我把房门做成了小小的洞口，仗着自己的优势欺负大家一样。"
+				},
+				{
+					"File" : "motions/Hiyori_m02.motion3.json",
+					"Sound" : "sounds/nahida.idle_11.wav",
+					"Text" : "我早就不满足于当一个听众了，一直都想出去看看。你冒险经验这么丰富，当我的向导好不好啊？你之后所有的故事，我都想亲身感受。"
+				},
+				{
+					"File" : "motions/Hiyori_m02.motion3.json",
+					"Sound" : "sounds/nahida.idle_12.wav",
+					"Text" : "我自认为我擅长提问和回答问题，但我渐渐明白，有很多人是揣着明白装糊涂，问题的答案并不能帮上他们的忙。是不是随着年龄增长，大家都会失去面对质问和答案的勇气呢…"
+				}
+			],
+			"LongSittingTip" : 
+			[
+				{
+					"File" : "motions/Hiyori_m06.motion3.json",
+					"Sound" : "sounds/nahida.longsittingtip_0.wav",
+					"Text" : "不知道干什么的话，要不要我带你去转转呀？"
+				},
+				{
+					"File" : "motions/Hiyori_m06.motion3.json",
+					"Sound" : "sounds/nahida.longsittingtip_1.wav",
+					"Text" : "又有心事吗？我来陪你一起想吧。"
+				}
+			],
+			"Midnight" : 
+			[
+				{
+					"File" : "motions/Hiyori_m02.motion3.json",
+					"Sound" : "sounds/nahida.midnight_0.wav",
+					"Text" : "快去睡吧，放心，我已经为你准备好甜甜的梦啦。"
+				}
+			],
+			"Morning" : 
+			[
+				{
+					"File" : "motions/Hiyori_m01.motion3.json",
+					"Sound" : "sounds/nahida.morning_0.wav",
+					"Text" : "早上好，我们赶快出发吧，这世上有太多的东西都是「过时不候」的呢。"
+				}
+			],
+			"TapBody" : 
+			[
+				{
+					"File" : "motions/Hiyori_m09.motion3.json",
+					"Sound" : "sounds/nahida.tap_body_0.wav",
+					"Text" : "别打啦！"
+				},
+				{
+					"File" : "motions/Hiyori_m09.motion3.json",
+					"Sound" : "sounds/nahida.tap_body_1.wav",
+					"Text" : "好痛啊。"
+				},
+				{
+					"File" : "motions/Hiyori_m02.motion3.json",
+					"Sound" : "sounds/nahida.tap_body_2.wav",
+					"Text" : "手牵手~"
+				},
+				{
+					"File" : "motions/Hiyori_m04.motion3.json",
+					"Sound" : "sounds/nahida.tap_body_3.wav",
+					"Text" : "我等你好久啦。"
+				},
+				{
+					"File" : "motions/Hiyori_m03.motion3.json",
+					"Sound" : "sounds/nahida.tap_body_4.wav",
+					"Text" : "有你想要的吗？"
+				},
+				{
+					"File" : "motions/Hiyori_m04.motion3.json",
+					"Sound" : "sounds/nahida.tap_body_5.wav",
+					"Text" : "这样不太明智…"
+				}
+			],
+			"TapHead" : 
+			[
+				{
+					"File" : "motions/Hiyori_m10.motion3.json",
+					"Sound" : "sounds/nahida.tap_head_0.wav",
+					"Text" : "被打晕了…"
+				},
+				{
+					"File" : "motions/Hiyori_m08.motion3.json",
+					"Sound" : "sounds/nahida.tap_head_1.wav",
+					"Text" : "变聪明啦~"
+				},
+				{
+					"File" : "motions/Hiyori_m03.motion3.json",
+					"Sound" : "sounds/nahida.tap_head_2.wav",
+					"Text" : "此即智慧之殿堂。"
+				},
+				{
+					"File" : "motions/Hiyori_m01.motion3.json",
+					"Sound" : "sounds/nahida.tap_head_3.wav",
+					"Text" : "好奇心值得嘉奖哦。"
+				},
+				{
+					"File" : "motions/Hiyori_m05.motion3.json",
+					"Sound" : "sounds/nahida.tap_head_4.wav",
+					"Text" : "呵呵，你的心意我收到了，味道也可圈可点。"
+				},
+				{
+					"File" : "motions/Hiyori_m09.motion3.json",
+					"Sound" : "sounds/nahida.tap_head_5.wav",
+					"Text" : "让我来想想办法。"
+				},
+				{
+					"File" : "motions/Hiyori_m05.motion3.json",
+					"Sound" : "sounds/nahida.tap_head_6.wav",
+					"Text" : "是源自谁的馈赠呢？"
+				},
+				{
+					"File" : "motions/Hiyori_m05.motion3.json",
+					"Sound" : "sounds/nahida.tap_head_7.wav",
+					"Text" : "思路变得更开阔了，天空和大海都能装进去。"
+				},
+				{
+					"File" : "motions/Hiyori_m10.motion3.json",
+					"Sound" : "sounds/nahida.tap_head_8.wav",
+					"Text" : "我…不明白…"
+				},
+				{
+					"File" : "motions/Hiyori_m07.motion3.json",
+					"Sound" : "sounds/nahida.tap_head_9.wav",
+					"Text" : "这种感觉，就像月莲找到了莲叶，珊瑚真珠找到了贝壳。"
+				}
+			]
+		},
+		"Physics" : "Nahida_1080.physics3.json",
+		"Textures" : 
+		[
+			"Nahida_1080.1024/texture_00.png",
+			"Nahida_1080.1024/texture_01.png",
+			"Nahida_1080.1024/texture_02.png",
+			"Nahida_1080.1024/texture_03.png"
+		]
+	},
+	"Groups" : 
+	[
+		{
+			"Ids" : 
+			[
+				"ParamMouthOpenY"
+			],
+			"Name" : "LipSync",
+			"Target" : "Parameter"
+		},
+		{
+			"Ids" : 
+			[
+				"ParamEyeLOpen",
+				"ParamEyeROpen"
+			],
+			"Name" : "EyeBlink",
+			"Target" : "Parameter"
+		}
+	],
+	"HitAreas" : 
+	[
+		{
+			"Id" : "ArtMesh60",
+			"Name" : "TapHead"
+		},
+		{
+			"Id" : "ArtMesh92",
+			"Name" : "TapBody"
+		}
+	],
+	"Version" : 3,
+	"Vits" : 
+	{
+		"Model" : "G_953000",
+		"SpeakerID" : 142,
+		"SpeakerName" : "纳西妲"
+	}
+}

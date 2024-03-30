@@ -1,0 +1,148 @@
+.music-table{
+  margin:0 5% 0 5%;
+}
+
+.music-table-title {
+  font-size: 40px;
+  margin: 3% 0 0 0;
+  font-weight: bolder;
+}
+
+.music-table-main {
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.music-table-buttons {
+  display: flex;
+}
+
+.music-table-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  margin: 0 3% 0 0;
+  /* padding: 0 14px; */
+  width: 125px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+.music-table-button:hover {
+  opacity: 0.9;
+}
+
+.music-table-button-icon {
+  /* font-size: 24px; */
+}
+
+.music-table-play-all {
+  background-color: rgba(255, 215, 209, 1);
+}
+
+.music-table-button-value{
+  margin: 0;
+}
+
+.music-table-icons {
+  display: flex;
+}
+
+.music-table-icon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  /* margin: 0 2% 0 0 ; */
+}
+
+.music-table-icon-icon {
+  padding: 0 2px 0 0;
+}
+
+.music-table-icon-value {
+  margin: 0;
+}
+
+/* 搜索栏 */
+.music-table-search-bar {
+  position: relative;
+  margin: 0 15px 0 0;
+}
+
+.music-table-search-bar-input {
+  width: 100px;
+  height: 30px;
+  padding: 0 8px;
+  color: white;
+  border:0;
+  border-radius: 17px;
+  outline: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.music-table-search-bar-close {
+  position: absolute;
+  top: 50%;
+  font-size: 0.5rem;
+  right: 5px;
+  transform: translate(0, -50%);
+}
+
+.music-table-search {
+  display: flex;
+  margin: 0 15px 0 0;
+}
+
+.music-upload-dialog {
+  position: relative;
+  padding: 30px;
+  width: 400px;
+  height: 250px;
+  cursor: pointer;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.music-table-music-dilog-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.7rem;
+}
+
+.upload-music-dialog-form {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.upload-music-dialog-form-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: flex-start;
+}
+
+.upload-music-dialog-form-title {
+  width: 80px;
+  flex-shrink: 0;
+}
+
+.upload-music-dialog-form-item-button {
+  padding: 0 10px;
+  flex-grow: 1;
+}
+
+.music-file {
+  color: black;
+}
+
+.form-button {
+  flex-grow: 1;
+}

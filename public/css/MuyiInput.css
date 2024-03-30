@@ -1,0 +1,21 @@
+.muyi-input {
+  width: 100%;
+}
+
+.muyi-input-input {
+  padding: 0;
+  width: calc(100% - 10px);
+  height: 35px;
+  padding: 0 5px;
+  border: 0.5px solid #D1D5DB;
+  border-radius: 3px;
+}
+
+.muyi-input-input:hover {
+  border: 0.5px solid rgb(147, 197, 253);
+}
+
+.muyi-input-input:focus-within {
+  box-shadow: 0 0 2.5px 1.2px rgba(147, 197, 253, 0.6);
+  outline: 0px;
+}

@@ -1,0 +1,107 @@
+{
+    "Version": 3,
+    "Type": 0,
+    "FileReferences": {
+        "Moc": "FileReferences_Moc_0.moc3",
+        "Textures": [
+            "FileReferences_Textures_0_0.png"
+        ],
+        "Physics": "FileReferences_Physics_0.json",
+        "PhysicsV2": {
+            "File": "FileReferences_Physics_0.json"
+        },
+        "Motions": {
+            "Tap右边黄鸡": [
+                {
+                    "Name": "誓约（没台词）",
+                    "File": "FileReferences_Motions_Tap右边黄鸡_0_File_0.motion3.json"
+                }
+            ],
+            "Tap摸头": [
+                {
+                    "Name": "摸头",
+                    "File": "FileReferences_Motions_Tap摸头_0_File_0.motion3.json",
+                    "Sound": "FileReferences_Motions_Tap摸头_0_Sound_0.wav",
+                    "Text": "现在心情很好对吧~"
+                }
+            ],
+            "Tap摸身子": [
+                {
+                    "Name": "1",
+                    "File": "FileReferences_Motions_Tap摸身子_0_File_0.motion3.json",
+                    "Sound": "FileReferences_Motions_Tap摸身子_0_Sound_0.wav",
+                    "Text": "团子好好吃~只要吃了这个，活个三天不是问题！至于三天之后……会吃腻的所以换成八桥吧♪"
+                },
+                {
+                    "Name": "2",
+                    "File": "FileReferences_Motions_Tap摸身子_1_File_0.motion3.json",
+                    "Sound": "FileReferences_Motions_Tap摸身子_1_Sound_0.wav",
+                    "Text": "点的单是……啊！我又不小心吃掉了！我真是…！"
+                },
+                {
+                    "Name": "3",
+                    "File": "FileReferences_Motions_Tap摸身子_2_File_0.motion3.json",
+                    "Sound": "FileReferences_Motions_Tap摸身子_2_Sound_0.wav",
+                    "Text": "难得的女仆店活动，我要把菜单都记下才行~嘻嘻，之后要做一大堆出来—"
+                },
+                {
+                    "Name": "普通触摸",
+                    "File": "FileReferences_Motions_Tap摸身子_3_File_0.motion3.json",
+                    "Sound": "FileReferences_Motions_Tap摸身子_3_Sound_0.wav",
+                    "Text": "好的，请问要点些什么呢？"
+                }
+            ],
+            "Tap特殊触摸": [
+                {
+                    "Name": "特触",
+                    "File": "FileReferences_Motions_Tap特殊触摸_0_File_0.motion3.json",
+                    "Sound": "FileReferences_Motions_Tap特殊触摸_0_Sound_0.mp3",
+                    "Text": "嗯,嗯…因为酒匂很可爱呢…?"
+                }
+            ],
+            "Tap左边黄鸡": [
+                {
+                    "Name": "回港动画",
+                    "File": "FileReferences_Motions_Tap左边黄鸡_0_File_0.motion3.json",
+                    "Sound": "FileReferences_Motions_Tap左边黄鸡_0_Sound_0.wav",
+                    "Text": "久等了~热乎乎的茶端来了！啊，忘了拿茶杯了！嗯，该怎么办好呢…？"
+                }
+            ],
+            "Start": [
+                {
+                    "Name": "登陆动画",
+                    "File": "FileReferences_Motions_Start_0_File_0.motion3.json",
+                    "Sound": "FileReferences_Motions_Start_0_Sound_0.wav",
+                    "Text": "美味松软的团子~♪你一个，我一个，剩下的我们对半分—♪诶嘿嘿，早上好！"
+                }
+            ]
+        }
+    },
+    "HitAreas": [
+        {
+            "Name": "右边黄鸡",
+            "Id": "jiu",
+            "Motion": "Tap右边黄鸡:誓约（没台词）"
+        },
+        {
+            "Name": "摸头",
+            "Id": "TouchHead",
+            "Motion": "Tap摸头:摸头"
+        },
+        {
+            "Name": "摸身子",
+            "Id": "TouchBody",
+            "Motion": "Tap摸身子"
+        },
+        {
+            "Name": "特殊触摸",
+            "Id": "TouchSpecial",
+            "Order": 1,
+            "Motion": "Tap特殊触摸:特触"
+        },
+        {
+            "Name": "左边黄鸡",
+            "Id": "jiu2"
+        }
+    ]
+}

@@ -1,0 +1,109 @@
+{
+    "Version": 3,
+    "FileReferences": {
+        "Moc": "FileReferences_Moc_0.moc3",
+        "Textures": [
+            "FileReferences_Textures_0_0.png"
+        ],
+        "Physics": "FileReferences_Physics_0.json",
+        "Motions": {
+            "TapBody": [
+                {
+                    "Name": "touch_body",
+                    "File": "FileReferences_Motions_head_0_File_0.json",
+                    "Text": "touch_body",
+                    "TextDuration": 1000
+                }
+            ]
+        }
+    },
+    "Controllers": {
+        "ParamHit": {
+            "Enabled": true
+        },
+        "ParamLoop": {},
+        "KeyTrigger": {
+            "Enabled": true
+        },
+        "EyeBlink": {
+            "MinInterval": 500,
+            "MaxInterval": 6000,
+            "Items": [
+                {
+                    "Id": "ParamEyeLOpen",
+                    "Min": 0.0,
+                    "Max": 1.0,
+                    "BlendMode": 2,
+                    "Input": 0
+                },
+                {
+                    "Id": "ParamEyeROpen",
+                    "Min": 0.0,
+                    "Max": 1.0,
+                    "BlendMode": 2,
+                    "Input": 0
+                }
+            ],
+            "Enabled": true
+        },
+        "LipSync": {
+            "Gain": 5.0,
+            "Items": [
+                {
+                    "Id": "ParamMouthOpenY",
+                    "Min": 0.0,
+                    "Max": 1.0,
+                    "Input": 0
+                }
+            ],
+            "Enabled": true
+        },
+        "MouseTracking": {
+            "SmoothTime": 0.15,
+            "Enabled": true
+        },
+        "AutoBreath": {
+            "Enabled": true
+        },
+        "ExtraMotion": {
+            "Enabled": true
+        },
+        "Accelerometer": {
+            "Enabled": true
+        },
+        "Microphone": {
+            "Enabled": true
+        },
+        "Transform": {},
+        "FaceTracking": {
+            "Enabled": true
+        },
+        "ParamValue": {
+            "Enabled": true
+        },
+        "PartOpacity": {
+            "Enabled": true
+        },
+        "ArtmeshOpacity": {
+            "Enabled": true
+        },
+        "ArtmeshColor": {
+            "Enabled": true
+        },
+        "ArtmeshCulling": {
+            "DefaultMode": 0,
+            "Enabled": true
+        },
+        "IntimacySystem": {
+            "Enabled": true
+        }
+    },
+    "HitAreas": [
+        {
+            "Name": "Body",
+            "Id": "TouchBody",
+            "Motion": "TapBody:touch_body"
+        }
+    ],
+    "Options": {}
+}

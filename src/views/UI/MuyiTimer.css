@@ -1,0 +1,10 @@
+.muyi-timer {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.muyi-timer-value {
+  margin: 0;
+}

@@ -1,0 +1,45 @@
+{
+	"Type": "Live2D Expression",
+	"Parameters": [
+		{
+			"Id": "Param17",
+			"Value": 30,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamJawOpen",
+			"Value": 0,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBodyAngleZ",
+			"Value": 10,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamBreath",
+			"Value": 0.573,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamAngleX",
+			"Value": -10.976,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamAngleY",
+			"Value": -2.927,
+			"Blend": "Add"
+		},
+		{
+			"Id": "Param38",
+			"Value": 1,
+			"Blend": "Add"
+		},
+		{
+			"Id": "ParamAngleZ",
+			"Value": 2.195,
+			"Blend": "Add"
+		}
+	]
+}

@@ -1,0 +1,27 @@
+.muyi-button {
+  height: 35px;
+  padding: 0 14px;
+  border: 0.5px solid #D1D5DB;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 3px;
+  /* animation:  muyi-button-animation 0.6s ease-out infinite; */
+}
+
+.muyi-button-strect {
+  width: 100%;
+}
+
+@keyframes muyi-button-animation{
+  0% {
+    box-shadow: 0 0 0 0px rgba(147, 197, 253, 0.3);
+  }
+  100% {
+    box-shadow: 0 0 0 2px rgba(147, 197, 253, 0.6);
+  }
+}
+
+.muyi-button:focus {
+  border: 0.5px solid rgba(147, 197, 253, 0.6);
+  box-shadow: 0 0 1.5px 1px rgba(147, 197, 253, 0.6);
+}

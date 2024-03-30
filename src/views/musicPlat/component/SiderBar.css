@@ -1,0 +1,99 @@
+.sider-bar {
+  position: absolute;
+  z-index: 998;
+  width: 25%;
+  height: 100%;
+  top: 0px;
+  left: -25%;
+  background-color: rgba(0, 0, 0, 0.9);
+  /* background-image: url("../../../static/img/A072B898FA59B34FC8464EA17D6D2A1D.jpg"); */
+  transition: transform 1s;
+}
+
+.sider-bar-folder {
+  transform: translate(0, 0);
+}
+
+.sider-bar-open {
+  transform: translate(100%, 0);
+}
+
+.sider-bar-main {
+  color: white;
+}
+
+.sider-bar-main-title {
+  margin: 10%;
+  display: flex;
+  align-items: center;
+}
+.sider-bar-main-title-icon {
+  font-size: 1.2rem;
+}
+.sider-bar-main-title-value {
+
+}
+
+.sider-bar-main-itemize-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sider-bar-main-itemize {
+  margin: 8% 5%;
+}
+.sider-bar-main-itemize-title {
+  font-size: 12px;
+}
+.sider-bar-main-itemize-icon {
+  cursor: pointer;
+}
+.sider-bar-main-itemize-main {
+  margin: 10px 0 0 0 ;
+}
+.sider-bar-main-itemize-main-value {
+  margin: 0;
+  padding: 8px 0 8px 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sider-bar-main-itemize-main-value:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.sider-bar-bar {
+  position: absolute;
+  cursor: pointer;
+  height: 10%;
+  width: 40px;
+  top: 50%;
+  right: 0px;
+  transform: translate(100%, -50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 0 10% 10% 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* right: */
+}
+
+.sider-bar-bar-icon {
+  font-size: 24px;
+}
+
+.song-sheet-add-dialog {
+  position: relative;
+  padding: 30px;
+  width: 300px;
+  height: 130px;
+  cursor: pointer;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

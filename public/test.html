@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: azure;
+        }
+
+        .container {
+            /* display: flex; */
+        }
+
+        .box {
+            /* width: 30px; */
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="background-color: beige;">
+        <!-- <div class="box" style="background-color: aquamarine;"></div>
+        <div class="box" style="background-color: black;"></div> -->
+    </div>
+</body>
+<script>
+    // let windowHieght = document.body.clientHeight
+    // const container = document.querySelector(".container")
+    // let index = 0
+    // let divHeight = 30
+    // let step = Math.ceil(windowHieght / divHeight)
+    // function parse() {
+    //     let scrollStartX = document.body.scrollTop
+    //     let temp = (scrollStartX + windowHieght) - index * divHeight
+    //     if(temp > 0) {
+    //         let tempNum = Math.ceil(temp / divHeight)
+    //         for(let i = 0; i < tempNum; i++) {
+    //             const divDom = document.createElement("div")
+    //             divDom.classList.add("box")
+    //             divDom.style.cssText = `background-color: rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255});`
+    //             container.appendChild(divDom)
+    //         }
+    //     }
+    // }
+    // parse()
+    // document.body.addEventListener("scroll", parse)
+
+    // function checkIfInstanceOf(obj, classFunction) {
+    //     console.log(typeof classFunction);
+    //     if (classFunction === null || (typeof classFunction !== "object" && typeof classFunction !== "function")) {
+    //         return false
+    //     }
+    //     return obj instanceof classFunction
+    // };
+    // console.log(checkIfInstanceOf(new Date(), Date));
+    function compactObject(obj){
+        if (obj instanceof Array) {
+            let nowIndex = 0, lastIndex = 0
+            for (let obj_length = obj.length; nowIndex < obj_length; nowIndex++) {
+                if (obj[nowIndex] instanceof Array) {
+                    obj[lastIndex++] = compactObject(obj[nowIndex])
+                } else if (obj[nowIndex]) {
+                    obj[lastIndex++] = obj[nowIndex]
+                }
+            }
+            obj.length = lastIndex
+        } else {
+            const keys = Object.keys(obj)
+            for (const key of keys) {
+                if (typeof obj[key] === "object" && obj[key] !== null) {
+                    obj[key] = compactObject(obj[key])
+                }
+                // obj[key] = obj[key] == true ?? obj[key] : undefined
+                else if (!obj[key]) {
+                    console.log(obj[key], obj[key] === null, true && obj[key]);
+                    // obj[key] = undefined
+                    delete obj.key
+                }
+            }
+        }
+        return obj
+    };
+    obj = { "a": null, "b": [false, 1, 2] }
+    console.log(compactObject(obj));
+</script>

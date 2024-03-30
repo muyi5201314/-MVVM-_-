@@ -1,0 +1,198 @@
+{
+  "id": "3789091",
+  "name": "大作业",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "980894",
+      "name": "暂停",
+      "font_class": "weibiaoti519",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "7594152",
+      "name": "24gf-pause2",
+      "font_class": "24gf-pause2",
+      "unicode": "ea81",
+      "unicode_decimal": 60033
+    },
+    {
+      "icon_id": "17082",
+      "name": "添加",
+      "font_class": "tianjia",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "577312",
+      "name": "加号",
+      "font_class": "jiahao",
+      "unicode": "e726",
+      "unicode_decimal": 59174
+    },
+    {
+      "icon_id": "2076218",
+      "name": "播放2",
+      "font_class": "bofang",
+      "unicode": "e87c",
+      "unicode_decimal": 59516
+    },
+    {
+      "icon_id": "5876278",
+      "name": "下一曲",
+      "font_class": "xiayiqu",
+      "unicode": "e7ff",
+      "unicode_decimal": 59391
+    },
+    {
+      "icon_id": "5876279",
+      "name": "上一曲",
+      "font_class": "shangyiqu",
+      "unicode": "e800",
+      "unicode_decimal": 59392
+    },
+    {
+      "icon_id": "11855571",
+      "name": "叉",
+      "font_class": "cha",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "781701",
+      "name": "上一曲1-01",
+      "font_class": "shangyiqu101",
+      "unicode": "e6e1",
+      "unicode_decimal": 59105
+    },
+    {
+      "icon_id": "781774",
+      "name": "下一曲1-01",
+      "font_class": "xiayiqu101",
+      "unicode": "e718",
+      "unicode_decimal": 59160
+    },
+    {
+      "icon_id": "1488903",
+      "name": "随机",
+      "font_class": "suiji",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "3427885",
+      "name": "排序题",
+      "font_class": "icon-",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "4425897",
+      "name": "循环",
+      "font_class": "xunhuan",
+      "unicode": "e7b1",
+      "unicode_decimal": 59313
+    },
+    {
+      "icon_id": "5876981",
+      "name": "列表顺序",
+      "font_class": "liebiaoshunxu",
+      "unicode": "e802",
+      "unicode_decimal": 59394
+    },
+    {
+      "icon_id": "11391536",
+      "name": "下载",
+      "font_class": "xiazai",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "7594048",
+      "name": "24gl-play",
+      "font_class": "24gl-play",
+      "unicode": "ea6d",
+      "unicode_decimal": 60013
+    },
+    {
+      "icon_id": "777845",
+      "name": "分类",
+      "font_class": "icon",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    },
+    {
+      "icon_id": "11391498",
+      "name": "歌单",
+      "font_class": "gedan",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "32834133",
+      "name": "左边",
+      "font_class": "zuobian",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "32834179",
+      "name": "右边",
+      "font_class": "youbian",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "1727452",
+      "name": "218下载、导入",
+      "font_class": "xiazaidaoru",
+      "unicode": "e8c6",
+      "unicode_decimal": 59590
+    },
+    {
+      "icon_id": "2076190",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e86e",
+      "unicode_decimal": 59502
+    },
+    {
+      "icon_id": "4932636",
+      "name": "云端上传",
+      "font_class": "yunduanshangchuan",
+      "unicode": "ec1d",
+      "unicode_decimal": 60445
+    },
+    {
+      "icon_id": "5388009",
+      "name": "云上传_o",
+      "font_class": "yunshangchuan_o",
+      "unicode": "ebb3",
+      "unicode_decimal": 60339
+    },
+    {
+      "icon_id": "5388010",
+      "name": "云下载_o",
+      "font_class": "yunxiazai_o",
+      "unicode": "ebb4",
+      "unicode_decimal": 60340
+    },
+    {
+      "icon_id": "15053949",
+      "name": "列表",
+      "font_class": "ic_batch_default24px",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "3979426",
+      "name": "音乐娱乐",
+      "font_class": "yinleyule",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    }
+  ]
+}

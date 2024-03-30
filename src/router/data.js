@@ -1,0 +1,5 @@
+const mountPotint = []
+
+export {
+  mountPotint
+}

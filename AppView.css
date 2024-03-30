@@ -1,0 +1,51 @@
+.app-view{
+  height: 100%;
+}
+
+.tooltip{
+   position: relative;
+}
+
+.tooltip::before {
+  content: attr(data-tool-tip);
+  position: absolute;
+  left: 50%;
+  bottom: 125%;
+  width: 100%;
+  min-width: 50px;
+  max-width: 250px;
+  padding: 4px 6px;
+  border-radius: 3px;
+  transform: translate(-50%, 0);
+  color: black;
+  text-align: center;
+  background-color: aliceblue;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  /* transition: opacity 0.5s; */
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 125%;
+  transform: translate(-2.5px, 10px);
+  border-width: 5px;
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+  /* transition: opacity 0.5s; */
+  visibility: hidden;
+}
+
+.tooltip:hover::before,
+.tooltip:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.info-p {
+  margin: 0;
+}
