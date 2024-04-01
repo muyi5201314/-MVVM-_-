@@ -3,12 +3,13 @@ import notFound from '../views/system/notFound.js'
 import MainView from '../views/musicPlat/MusicFlatFrom.js'
 import MusicFlatFrom from '../views/musicPlat/MusicFlatFrom.js'
 import RegisterView from '../views/user/RegisterView.js'
+import SubmitView from '../views/user/SubmitView.js'
 
 // import 
 const routerSetting = [
   {
     path: '/',
-    component: MusicFlatFrom,
+    component: SubmitView,
     meta: {
       title: '欢迎登陆',
     },

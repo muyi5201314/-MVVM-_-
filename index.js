@@ -1,21 +1,11 @@
-// import { createListen } from './src/router/listen.js'
-
-// // //console.log(createListen);
-// // createListen()
-// //console.log(43290483290);
-
-// function backWay() {
-//   window.location = '#hash'
-// }
-// const express = require('express')
-// const path = require('path')
-// const app = express()
-
-import express from 'express'
 import path from 'path'
 import fs from "fs"
 import http from 'http'
 import url from 'url'
+import chokidar from 'chokidar'
+import WebSocket from 'nodejs-websocket'
+import ws from 'ws'
+// console.log(ws, ws.Server);
 
 import { initRouter } from './src/router/index.js'
 import AppView from './AppView.js'
@@ -23,16 +13,17 @@ import { createApp } from './src/parser/createNode/index.js'
 import { doMounted } from './src/parser/liveCycle.js'
 import routerSetting from './src/router/routerSetting.js'
 
-import jsdom from 'jsdom'
-const { JSDOM } = jsdom;
+// import jsdom from 'jsdom'
+// const { JSDOM } = jsdom;
 
-let rootVNode
+// let rootVNode
 
 // 文件转发器
 function fileHandle(req, res) {
   let url = req.url.split("?")[0]
   let seq = req.url.split("?")[1]?.split("&") ?? []
-  const FilePath = path.join("D:\\vuejs\\graduate_work", url);
+  console.log(url);
+  const FilePath = path.join("D:\\vuejs\\graduate_work\\-MVVM-_-\\", url);
   // 文件不存在
   if (!fs.existsSync(FilePath)) {
     res.writeHead(400, { 'Content-Type': 'text/plain' });
@@ -71,144 +62,94 @@ function fileHandle(req, res) {
   return res.end();
 }
 
-// 1. 创建服务
-const server = http.createServer((req, res) => {
-  let url = req.url.split("?")[0]
-  let seq = req.url.split("?")[1]?.split("&") ?? []
-  console.log(url);
-  for (let i = 0; i < routerSetting.length; i++) {
-    if (url === routerSetting[i].path) {
-        let indexHtmlContent = fs.readFileSync("./public/index.html", "utf-8")
-        // const dom = new JSDOM(indexHtmlContent, {
-        //   "url": "http://localhost"
-        // });
-        // global.window = dom.window
-        // global.document = window.document
-        // global.XMLHttpRequest = window.XMLHttpRequest
-        // document.querySelector("html").innerHTML += `
-        // <script type="module">
-        //   import { initRouter } from './src/router/index.js'
-        //   import AppView from './AppView.js'
-        //   import { createApp } from './src/parser/createNode/index.js'
-        //   import { doMounted } from './src/parser/liveCycle.js'
-        
-        //   initRouter()
-        //   const appDom = document.getElementById("app")
-        //   // //console.log(appDom);
-        //   let rootVNode = createApp(AppView, appDom)
-        //   app.appendChild(rootVNode.elm)
-        //   doMounted()
-        // </script>`
-        res.write(indexHtmlContent);
-        res.end();
-        return
+// 初始化服务
+function init() {
+  const settingJSON = fs.readFileSync("./setting.json", "utf-8")
+  return JSON.parse(settingJSON)
+}
+const settingData = init()
+
+
+// 创建websocket服务
+const wss = WebSocket.createServer(function (conn) {
+  // 创建 HTTP 服务器
+  const server = http.createServer((req, res) => {
+    // 如果请求的是根路径，则返回 HTML 页面
+    if (req.url === '/') {
+      fs.readFile(settingData.indexHtmlDir, (err, data) => {
+        if (err) {
+          res.writeHead(500);
+          res.end('Server Error');
+        } else {
+          res.writeHead(200, { 'Content-Type': 'text/html' });
+          res.end(data);
+        }
+      });
+    } else {
+      res.writeHead(404);
+      res.end('Not Found');
     }
-  }
-  return fileHandle(req, res)
-});
-// server.once('request', function(req, res) {
-//   let indexHtmlContent = fs.readFileSync("./public/index.html", "utf-8")
-//   const dom = new JSDOM(indexHtmlContent, {
-//     url: "http://localhost"
+    // return fileHandle(req, res)
+  });
+  // 监听端口
+  server.listen(9983, () => {
+    console.log('Server running at http://localhost:9983/');
+  });
+
+  // 当收到客户端消息时触发
+  conn.on("text", function (str) {
+    console.log("Received " + str);
+
+    // 向客户端发送消息
+    conn.sendText("Hello, client!");
+  });
+
+  // 当连接关闭时触发
+  conn.on("close", function (code, reason) {
+    console.log("Connection closed");
+  });
+}).listen(9984);
+// wss.on('connection', function connection(ws) {
+//   console.log('Client connected');
+
+//   const watcher = chokidar.watch(settingData.listtenDir, {
+//     ignored: /[\/\\]\./,
+//     persistent: true
 //   });
-//   global.window = dom.window
-//   global.document = window.document
-//   global.XMLHttpRequest = window.XMLHttpRequest
 
-//   // 1.1 解析 url
-//   const { query, pathname } = url.parse(req.url, true);
-
-//   initRouter()
-//   const appDom = document.getElementById("app")
-//   //console.log(appDom);
-//   let rootVNode = createApp(AppView, appDom)
-//   appDom.appendChild(rootVNode.elm)
-//   doMounted()
-
-//   if (req.url.endsWith(".css")) {
-//     console.log(cssPath);
-//     const cssPath = path.join(__dirname, req.url);
-//     console.log(cssPath);
-//     const fileStream = fs.createReadStream(cssPath, 'utf8');
-//     res.writeHead(200, { 'Content-Type': 'text/css' });
-//     fileStream.pipe(res);
-//   } else {
-//     res.writeHead(404, { 'Content-Type': 'text/plain' });
-//     // res.end('Not found');
-//   }
-//   res.end(document.querySelector("html").outerHTML);
-
-//   // if (pathname === "/a") {
-//   //     // 如果访问的是 /a 那么读取 client目录下的views目录下的pageA.html 并返回出去
-//   //     fs.readFile("./client/views/pageA.html", "utf-8", (err, data) => {
-//   //         if (err) return //console.log(err);
-
-//   //         res.end(data);
-//   //     });
+//   // 当有文件添加、修改或删除时，向客户端发送通知
+//   watcher.on('all', (event, path) => {
+//     console.log(`File ${path} ${event}`);
+//     const indexHtmlContent = fs.readFileSync(settingData.indexHtmlDir, "utf-8")
+//     ws.send(indexHtmlContent)
+//     // ws.end()
+//     // returnd
+//   });
+//   // (req, res) => {
+//   //   let url = req.url.split("?")[0]
+//   //   let seq = req.url.split("?")[1]?.split("&") ?? []
+//   //   // console.log(url);
+//   //   for (let i = 0; i < routerSetting.length; i++) {
+//   //     if (url === routerSetting[i].path) {
+//   //       let indexHtmlContent = fs.readFileSync("./public/index.html", "utf-8")
+//   //       res.write(indexHtmlContent);
+//   //       res.end();
+//   //       return
+//   //     }
+//   //   }
+//   //   return fileHandle(req, res)
 //   // }
 
-//   // if (pathname === "/b") {
-//   //     res.end("hello pageB");
-//   // }
-
-//   // if (pathname === "/list") {
-//   //     // 如果访问的是 /list 那么读取 client目录下的views目录下的list.html 并返回出去
-//   //     fs.readFile("./client/views/list.html", "utf-8", (err, data) => {
-//   //         if (err) return //console.log(err);
-
-//   //         res.end(data);
-//   //     });
-//   // }
+//   // 当客户端断开连接时，停止监听文件夹变化
+//   ws.on('close', function () {
+//     console.log('Client disconnected');
+//     watcher.close();
+//   });
 // });
 
-server.listen(9983, () => {
-  console.log("http://localhost:9983 已开启");
-})
+// console.log("http://localhost:9983 已开启");
+// // server.listen(9983, () => {
+// //   console.log("http://localhost:9983 已开启");
+// // })
 
-// // 2. 给服务配置端口号
-// server.listen(8080, () => //console.log("开启服务成功, 端口号为 8080"));
-
-// const app = express()
-// app.use(express.static(path.join(path.resolve(), 'public')))
-
-// http.createServer(function (req, res) {
-//   var html = buildHtml(req);
-
-//   res.writeHead(200, {
-//     'Content-Type': 'text/html',
-//     'Content-Length': html.length,
-//     'Expires': new Date().toUTCString()
-//   });
-//   //console.log(document.getElementById("app"));
-//   res.end(html);
-//   //console.log(document.getElementById("app"));
-//   // document.getElementsByName("html").appendChild("")
-// }).listen(8080);
-
-
-// function buildHtml(req) {
-//   var header = '';
-//   var body = '<div id="app"></div>';
-
-//   // concatenate header string
-//   // concatenate body string
-
-//   return '<!DOCTYPE html>'
-//        + '<html><head>' + header + '</head><body>' + body + '</body></html>';
-// };
-
-// //console.log(document.getElementById("app"));
-// app.listen(8080, () => {
-//   // //console.log('App listening at port 8080')
-//   // const appDom = document.createElement("div")
-//   // //console.log(appDom);
-//   // let rootVNode = initRouter(AppView, appDom)
-//   // app.appendChild(rootVNode.elm)
-//   // doMounted()
-//   // initRouter()
-//   initRouter()
-//   const app = document.getElementById("app")
-//   let rootVNode = createApp(AppView, app)
-//   app.appendChild(rootVNode.elm)
-//   doMounted()
-// })
+// init()
