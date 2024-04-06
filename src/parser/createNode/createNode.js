@@ -10,15 +10,6 @@ function createNode(node, data) {
   let tempResult
   switch(node.type) {
     case tagType.component:
-      // 组件已创建
-      // if(node.data.hasCreated) {
-      //   // 组件已改变，重新创建组件
-      //   tempResult = hasStaticNode(node, data)
-      //   // 组件不存在，重新创建组件
-      // } else {
-      //   tempResult = createComponent(node, data)
-      //   node.data.hasCreated = true
-      // }
       tempResult = createVNode(node, data)
       break
     case tagType.router:

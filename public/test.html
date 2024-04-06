@@ -56,57 +56,35 @@
     //     }
     //     return obj instanceof classFunction
     // };
-    // console.log(checkIfInstanceOf(new Date(), Date));
-    function cancellable(generator) {
-        function wait(promise, generator, resolve, reject) {
-            promise.then((value) => {
-                let item = generator.next(value)
-                while (!item.done) {
-                    item = generator.next(item.value)
-                    console.log(item);
-                    if (item.value instanceof Promise) {
-                        item.value = wait(item.value, generator, resolve, reject)
-                    }
-                }
-            }).catch((e) => {
-                reject(e)
-            })
+    // console.log(checkIfInstanceOf(new Date(), Date))
+    function deepDom(dom) {
+        if(!dom) {
+            return
         }
-
-
-        let cancelFn = () => { }
-        const temp = new Promise((resolve, reject) => {
-            try {
-                cancelFn = () => {
-                    reject("Cancelled")
+        const domList = []
+        const domIndex = []
+        let _dom = dom
+        let _index = 0
+        while(_dom || domList.length) {
+            if(_dom) {
+                console.log(_dom.nodeName);
+                domList.push(_dom)
+                _dom = _dom.children[0]
+                domIndex.push()
+            } else {
+                _dom = domList[domIndex.length - 1]
+                _index = domIndex[domIndex - 1] + 1
+                console.log(1);
+                if(!_dom.children[_index]) {
+                    domList.pop()
+                    domIndex.pop()
+                } else {
+                    _dom = _dom.children[_index]
+                    console.log(2);
+                    domIndex[domIndex - 1] = _index
                 }
-                let item = generator.next()
-                console.log(item);
-                while (!(item.value instanceof Promise) && !item.done) {
-                    console.log(item);
-                    item = generator.next(item.value)
-                }
-                let tempResult = item.value
-                if(item.value instanceof Promise) {
-                    let tempResult = wait(item.value, generator, reject)
-                }
-                resolve(item.value)
-            } catch (e) {
-                reject(e)
             }
-        })
-        return [cancelFn, temp]
-    };
-
-    function* tasks() {
-        const val = yield new Promise(resolve => resolve(2 + 2));
-        yield new Promise(resolve => setTimeout(resolve, 10));
-        return val + 1;
+        }
     }
-    const [cancel, promise] = cancellable(tasks());
-    console.log(promise);
-    // setTimeout(cancel, 50);
-    cancel()
-    promise.catch(e => console.log(e)); // logs "Cancelled" at t=50ms
-
+    // deepDom(document.querySelector(".container"))
 </script>

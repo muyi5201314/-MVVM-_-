@@ -24,3 +24,10 @@ export {
   patchComponent
 }
 
+{
+  name: "属性名称";
+  value: "属性值";
+  el: "dom元素";
+  type: "指令种类";
+  data: {}//扩展区;
+}

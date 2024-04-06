@@ -1,5 +1,10 @@
 const SubmitView = {
-  template: '<div class="cc">{{data.muyi}}</div>',
+  template:
+    `<div 
+    v-for="(item, index) in data.textV_for"
+    v-key="item"
+    class="cc"
+  > {{ data.muyi + item }}</div > `,
   // 这里有可能形成闭环
   components: {
   },
@@ -8,7 +13,10 @@ const SubmitView = {
   data() {
     return {
       jk: 1,
-      muyi: '周鑫是我儿子',
+      muyi: '周鑫是我孙子',
+      textV_for: [
+        1, 2, 3, 4
+      ]
     }
   },
   methods: {

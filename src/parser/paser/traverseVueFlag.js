@@ -229,6 +229,7 @@ function traverseVueFlag(ast) {
       }
     }
   }
+  console.log(ast);
 }
 
 export {
